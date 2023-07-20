@@ -14,7 +14,9 @@
   box-sizing: border-box;
 }
 /* Base */
-
+img{
+  display: block;
+}
 h1,
 h2,
 h3,
@@ -102,9 +104,24 @@ a {
 .header-logo {
   margin-right: 76px;
 }
-.header-nav,
-.header-menu-list,
-.address-menu-list,
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.header-menu-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.address-menu-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -165,9 +182,10 @@ a {
 /* Main */
 .section-main {
   background-color: #2e2f42;
+  padding: 188px 0;
 }
 .section-main-wrapper {
-  height: 600px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,6 +224,7 @@ a {
   display: flex;
   justify-content: start;
   align-items: baseline;
+  flex-basis: calc((100% - 72px) / 4);
   gap: 24px;
 }
 .text {
@@ -227,6 +246,7 @@ a {
   display: flex;
   gap: 24px;
 }
+
 .work {
   font-size: 36px;
   text-align: center;
@@ -246,11 +266,10 @@ a {
   background-color: #f4f4fd;
   padding: 120px 0;
 }
-.team-item img {
-  margin-bottom: 32px;
-}
+
 .text-item-main {
   margin-bottom: 8px;
+  text-align: center; 
 }
 
 .team-list {
@@ -269,8 +288,12 @@ a {
 }
 .team-item {
   background-color: #ffffff;
-  padding-bottom: 32px;
+
   text-align: center;
+  border-radius: 0px 0px 4px 4px;
+}
+.team-item-inner{
+  padding: 32px 0;
 }
 /* footer */
 .footer {
@@ -280,6 +303,7 @@ a {
 .footer-logo {
   margin-bottom: 16px;
   margin-right: 0;
+  display: inline-block;
 }
 
 .footer-logo-web {
@@ -320,11 +344,15 @@ a {
   color: #4d5ae5;
   padding: 12px 24px;
   cursor: pointer;
+  border-radius: 4px;
+border: 1px solid var(--cornflower, #E7E9FC);
+background: var(--cloud, #F4F4FD);
 }
 .button-link:hover,
 .button-link:focus {
   background-color: #404bbf;
   color: #ffffff;
+  border: 1px solid transparent;
 }
 .section-portfolio {
 padding: 96px 0 120px;
